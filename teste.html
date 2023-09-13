@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout teste</title>
+</head>
+<style>
+    body{
+        grid-template-areas: "header header"
+        "main aside"
+        "footer footer";
+        display: grid;
+        font-family: sans-serif;
+        margin: 0;
+        height: 100vh;
+        grid-template-rows: 50px 1fr 40px;
+        grid-template-columns: 1fr 80px;
+    }
+    header{
+        display: flex;
+        grid-area: header;
+        padding: 0 8px;
+        background-color: black;
+        color: white;
+        justify-content: space-between;
+        align-items: center;
+    }
+    main{
+        grid-area: main;
+        display: flex;
+        padding: 0 8px;
+        background-color: gainsboro;
+    }
+    aside{
+        grid-area: aside;
+        padding: 0 8px;
+        background-color: cadetblue;
+        align-items: center;
+    }
+    footer{
+        grid-area: footer;
+        padding: 0 8px;
+        background-color: darkblue;
+        color: white;
+        text-align: center;
+    }
+</style>
+<body>
+    <header>
+        <div>Logo</div>
+        <div>Home</div>
+    </header>
+    <main>
+        conteudo
+    </main>
+    <aside>Info Add</aside>
+    <footer>Rodapé</footer>
+</body>
+</html>

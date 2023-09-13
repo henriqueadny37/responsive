@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste de layout grid</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: grid;
+            grid-template-areas: 
+            "header header"
+            "main aside"
+            "footer footer";
+            grid-template-rows: 50px 1fr 40px;
+            grid-template-columns: 1fr 80px;
+        }
+        header{
+            grid-area: header;
+            background-color: black;
+            color: yellow;
+            padding: 0 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        main{
+            background-color: cyan;
+            grid-area: main;
+            padding: 0 8px;
+        }
+        aside{
+            grid-area: aside;
+            background-color: blue;
+            padding: 0 8px;
+            color: white;
+        }
+        footer{
+            grid-area: footer;
+            background-color: azure;
+            padding: 0 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>Logo</div>
+        <div>Home</div>
+    </header>
+    
+    <main>Conteúdo</main>
+
+    <aside>info add</aside>
+    
+    <footer>Rodapé</footer>
+</body>
+</html>
